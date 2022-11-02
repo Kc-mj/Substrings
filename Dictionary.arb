@@ -1,9 +1,12 @@
 def sub_string (str, arr)
     wordCount= { } 
     arr.each { |dicWord| wordCount[dicWord]   #.each takes a list as first argument, and block as second 
-        str.downcase.split( " ").each{|word|}}  
+        str.downcase.split( " ").each{|word| 
+           word.include?(dicWord) ? wordCount[dicWord] += 1 : nil
+            }
+        }
+    return wordCount
+ end 
 
-
-
-dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit" ]
-puts dictionary.join( ", ")
+ dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit" ]
+ substrings("Howdy partner, sit down! How's it going?", dictionary)
