@@ -1,7 +1,7 @@
 def sub_string (str, arr)
     wordCount= { } 
-
-
+    arr.each { |dicWord| wordCount[dicWord]   #.each takes a list as first argument, and block as second 
+        str.downcase.split( " ").each{|word|}}  
 
 
 
